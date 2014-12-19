@@ -1,0 +1,30 @@
+{
+  "name": "prunner",
+  "version": "1.0.0",
+  "description": "Run shell commands in simultaneously",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "prunner": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/greenify/prunner"
+  },
+  "keywords": [
+    "shell",
+    "commands",
+    "simulataneously",
+    "simultaneous",
+    "parallel",
+    "bash"
+  ],
+  "author": "greenify <greenify@notsharingmy.info> (https://github.com/greenify)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greenify/prunner/issues"
+  },
+  "homepage": "https://github.com/greenify/prunner"
+}
