@@ -33,4 +33,5 @@ var outWrapper = function(name) {
 programs.forEach(function(program) {
   var p = spawn(program[0], program.slice(1));
   p.stdout.on("data", outWrapper(program.join("-")));
+  p.stderr.on("err", outWrapper(program.join("-")));
 });
