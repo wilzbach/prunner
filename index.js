@@ -2,7 +2,8 @@
 
 // executes some commands in parallel
 
-var spawn = require("child_process").spawn;
+//var spawn = require("child_process").spawn;
+var spawn = require("win-spawn");
 
 if (process.argv.length < 3) {
   console.log("Please enter at least one process");

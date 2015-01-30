@@ -1,6 +1,6 @@
 {
   "name": "prunner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Run shell commands in simultaneously",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/greenify/prunner/issues"
   },
-  "homepage": "https://github.com/greenify/prunner"
+  "homepage": "https://github.com/greenify/prunner",
+  "dependencies": {
+    "win-spawn": "^2.0.0"
+  }
 }
