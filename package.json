@@ -1,6 +1,6 @@
 {
   "name": "prunner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run shell commands in simultaneously",
   "main": "index.js",
   "scripts": {

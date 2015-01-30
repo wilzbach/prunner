@@ -18,20 +18,26 @@ var programs = args.map(function(e){
   return e.split(/\s+/);
 });
 
-console.log(programs);
-
 var out = function(data) {
   process.stdout.write(data);
 };
 
 var outWrapper = function(name) {
-  return function(line){
-      out("[" + name+ "]: " +  line);
+  return function(text){
+      text.split("\n").forEach(function(line){
+        if(line.trim().length > 0){
+          out("[" + name+ "]: " +  line.trim() + "\n");
+        }
+      });
   };
 };
 
 programs.forEach(function(program) {
   var p = spawn(program[0], program.slice(1));
+  p.stdout.setEncoding('utf8');
   p.stdout.on("data", outWrapper(program.join("-")));
+  p.stdout.on("err", outWrapper(program.join("-")));
+  p.stderr.setEncoding('utf8');
+  p.stderr.on("data", outWrapper(program.join("-")));
   p.stderr.on("err", outWrapper(program.join("-")));
 });
